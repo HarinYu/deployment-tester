@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/1.png" />
+    <title>MOMENTUM</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/3535adb32e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <audio id="audioContainer">
+        <source id="audioSource" src="" />
+      </audio>
+      <div id="music">
+        <img src="img/ghost22.png" alt="유령" id="ghost" />
+        <div id="onOffWrap">
+          <button id="playBtn"><i class="fas fa-play"></i></button>
+          <button id="audioNextBtn"><i class="fas fa-step-forward"></i></button>
+          <button id="stopBtn"><i class="fas fa-stop"></i></button>
+        </div>
+      </div>
+    </header>
+    <!-- WELCOME -->
+    <div id="welcome" style="display: none">
+      <img src="img/ghost1.png" alt="" />
+      <span></span>
+      <span id="blink">|</span>
+    </div>
+    <!-- LOGIN FORM -->
+    <form id="login_form" class="hidden">
+      <input type="text" required maxlength="13" placeholder="click" />
+      <input type="submit" value="" />
+    </form>
+
+    <!-- SECTION -->
+    <div id="section">
+      <!-- white-space -->
+      <div id="white_space"></div>
+
+      <!-- GREETINGS -->
+      <div id="greetings">
+        <!-- GREETING -->
+        <div id="greeting">
+          <span></span>
+        </div>
+
+        <!-- IMAGE -->
+        <div id="imgs">
+          <img src="img/ghost1.png" alt="" />
+        </div>
+
+        <!-- CLOCK -->
+        <div id="clocks">
+          <span>00:00:00</span>
+        </div>
+
+        <!-- WEATHER -->
+        <div id="weather">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- TODO -->
+      <div id="todos">
+        <div id="space_todo"></div>
+        <div id="todo">
+          <form id="todo_form">
+            <input
+              type="text"
+              required
+              maxlength="12"
+              placeholder="TO DO LIST"
+            />
+            <button type="submit"><i class="fas fa-ghost"></i></button>
+          </form>
+          <div id="todoClick">
+            <ul id="todo_list"></ul>
+            <i class="fas fa-caret-up" id="up"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/music.js" defer></script>
+    <script src="js/typing.js" defer></script>
+    <script src="js/greeting.js" defer></script>
+    <script src="js/todo.js" defer></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/click.js"></script>
+    <script src="js/clock.js" defer></script>
+    <script src="js/weather.js" defer></script>
+  </body>
+</html>
+x

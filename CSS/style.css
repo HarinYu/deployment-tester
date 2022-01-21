@@ -1,0 +1,441 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-black: #2e2e2e;
+  --color-purple: #100716;
+  --color-dark-purple: #2a1633;
+
+  /* Font Size */
+  --font-xlarge: 60px;
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-list: 24px;
+  --font-regular: 26px;
+  --font-small: 24px;
+  --font-micro: 14px;
+
+  /* Font Weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+}
+
+/* 공통 부분 */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-black);
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* HEADER_MUSIC */
+
+#music img {
+  width: 45px;
+  margin-bottom: 3px;
+  opacity: 80%;
+  transition: all 300ms ease;
+}
+
+#music img:hover {
+  transform: translateX(18px);
+}
+
+#music {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 0px 0px 23px;
+}
+
+#onOffWrap {
+  background-color: var(--color-light-grey);
+  opacity: 90%;
+  margin-top: 4px;
+  padding: 2px 9px;
+  border-radius: 10px;
+}
+
+#onOffWrap i {
+  color: var(--color-white);
+  opacity: 80%;
+  font-size: 13px;
+}
+
+/* WELCOME */
+
+#welcome {
+  display: flex;
+  align-items: flex-end;
+  height: 38vh;
+  width: 100vw;
+  justify-content: center;
+}
+#welcome span {
+  font-size: var(--font-xlarge);
+  font-family: 'Indie Flower', cursive;
+  color: var(--color-white);
+}
+#blink {
+  animation: blink 0.5s infinite;
+  font-size: 2.5rem;
+}
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+#welcome img {
+  width: 70px;
+  margin: 0 18px 120px 10px;
+  opacity: 80%;
+  position: relative;
+  top: 100px;
+  transition: all 100ms ease;
+}
+#welcome img:hover {
+  transform: rotate(-20deg);
+}
+
+/* 이름 입력 부분 */
+
+#login_form {
+  width: 100vw;
+  padding: 50px 0;
+}
+#login_form input {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: 'Indie Flower', cursive;
+  font-size: var(--font-xlarge);
+  width: 100%;
+  text-align: center;
+  color: var(--color-white);
+  caret-color: var(--color-black);
+}
+
+#login_form input:last-child {
+  cursor: default;
+}
+::placeholder {
+  color: var(--color-light-grey);
+  font-family: 'Indie Flower', cursive;
+}
+
+/* SECTION */
+
+#section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* GREETINGS */
+#greetings {
+  margin-top: 50px;
+}
+
+/* GREEING */
+
+#greeting span {
+  text-align: center;
+  font-size: 70px;
+  font-family: 'Indie Flower', cursive;
+  color: var(--color-white);
+  font-weight: var(--weight-bold);
+}
+
+/* IMAGE */
+
+#imgs {
+  text-align: center;
+  margin: 20px;
+}
+
+#imgs img {
+  opacity: 80%;
+  width: 55px;
+  transition: all 300ms ease-in;
+}
+
+#imgs img:hover {
+  transform: rotate(-13deg);
+}
+
+/* CLOCK */
+
+#clocks {
+  text-align: center;
+  margin: 30px;
+}
+
+#clocks span {
+  font-size: 35px;
+  font-family: 'Indie Flower', cursive;
+  color: var(--color-light-white);
+  font-weight: var(--weight-bold);
+}
+
+/* WEATHER */
+
+#weather {
+  text-align: center;
+  margin: 30px;
+}
+
+#weather span {
+  font-size: 20px;
+  color: var(--color-light-white);
+  font-weight: var(--weight-bold);
+}
+
+#weather span:nth-child(2) {
+  font-family: 'Indie Flower', cursive;
+}
+
+#weather span:last-child {
+  font-family: 'Indie Flower', cursive;
+}
+
+/* TODO */
+
+#todos {
+  margin-top: 30px;
+}
+
+#todo {
+  border-radius: 20px;
+}
+
+#todo_form {
+  padding: 10px;
+  background-color: var(--color-dark-grey);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+#todo_form input {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: var(--font-regular);
+  font-family: 'Poor Story', cursive;
+  text-align: center;
+  color: var(--color-dark-white);
+}
+#todo_form button {
+  font-size: var(--font-regular);
+  color: var(--color-dark-white);
+  /* padding-right: 8px; */
+  opacity: 80%;
+}
+
+#todo_form button:hover {
+  color: var(--color-black);
+}
+
+#todo_list {
+  display: none;
+  text-align: center;
+  background-color: var(--color-dark-grey);
+  font-family: 'Poor Story', cursive;
+  list-style: none;
+  height: 18vh;
+  font-size: var(--font-small);
+  overflow: hidden auto;
+}
+#todo_list li {
+  margin: 7px 0 7px 0;
+}
+#up {
+  display: none;
+  padding-top: 7px;
+  background-color: var(--color-dark-grey);
+  border-end-end-radius: 20px;
+  border-end-start-radius: 20px;
+  font-size: 25px;
+  color: var(--color-grey);
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+#up:hover {
+  color: var(--color-black);
+}
+
+@media screen and (min-width: 720px) {
+  /* SECTION */
+  #section {
+    flex-direction: row;
+    height: 80vh;
+  }
+
+  /* white-space */
+  #white_space {
+    flex: 1 1 15%;
+  }
+
+  /* GREETINGS */
+  #greetings {
+    margin-top: 0;
+    flex: 1 1 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* GREETING */
+
+  #greeting {
+    flex: 1 1 90%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  #greeting span {
+    font-size: 90px;
+  }
+
+  /* IMG */
+
+  #imgs {
+    flex: 1 1 5%;
+    margin: 10px;
+  }
+
+  /* CLOCK */
+
+  #clocks {
+    flex: 1 1 10%;
+  }
+  #clocks span {
+    font-size: 35px;
+  }
+
+  /* WEATHER */
+
+  #weather {
+    flex: 1 1 30%;
+  }
+
+  #weather span {
+    font-size: 21px;
+  }
+
+  /* TODO */
+
+  #todos {
+    flex: 1 1 13%;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+  }
+
+  /* SPACE_TODO */
+  #space_todo {
+    flex: 1 1 80%;
+  }
+
+  /* TODO */
+  #todo {
+    flex: 1 1 20%;
+    border-radius: 20px;
+    margin-right: 20px;
+  }
+
+  #todo_form {
+    display: flex;
+    padding-top: 10px;
+  }
+
+  #todo_form input {
+    font-size: var(--font-regular);
+  }
+  #todo_list {
+    font-size: var(--font-regular);
+    height: 25vh;
+    padding: 15px;
+    text-align: left;
+  }
+
+  #todo_list li {
+    margin: 8px 0 8px 0;
+  }
+
+  #up {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* white-space */
+  #white_space {
+    flex: 1 1 17%;
+  }
+  /* GREETINGS */
+  #greetings {
+    flex: 1 1 66%;
+  }
+
+  #todos {
+    flex: 1 1 17%;
+  }
+
+  #greeting span {
+    font-size: 100px;
+  }
+
+  /* CLOCK */
+
+  #clocks span {
+    font-size: 40px;
+  }
+
+  /* WEATHER */
+
+  #weather span {
+    font-size: 25px;
+  }
+
+  /* TODO */
+
+  #todo_list {
+    font-size: var(--font-medium);
+    height: 30vh;
+    text-align: left;
+    padding: 15px;
+  }
+  #todo_form {
+    padding-top: 10px;
+  }
+
+  #up {
+    font-size: 25px;
+  }
+}
